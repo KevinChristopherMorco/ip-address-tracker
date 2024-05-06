@@ -26,7 +26,7 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 
 ### Links
 
-- Solution URL: [FAQ Accordion](https://github.com/KevinChristopherMorco/ip-address-tracker)
+- Solution URL: [IP Address Tracker](https://github.com/KevinChristopherMorco/ip-address-tracker)
 
 ## My process
 
