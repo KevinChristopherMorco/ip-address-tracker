@@ -18,27 +18,38 @@ const errorMessage = () => {
     return
 }
 
+const serverError = () => {
+    Swal.fire({
+        title: "Whooops...",
+        text: "Something went wrong in the servers, please contact the developer.",
+        icon: "error"
+    });
+    return
+}
+
 const fetchData = () => {
     let apiUrl
     if (ipInput.value === '') {
-        apiUrl = 'https://ipapi.co/json/'
+        apiUrl = 'https://api.ipgeolocation.io/ipgeo/?apiKey=327e0c695ea84e3ab9915b79b90175fe&ip='
     } else {
-        apiUrl = `https://ipapi.co/${ipInput.value}/json/`
+        apiUrl = `https://api.ipgeolocation.io/ipgeo/?apiKey=327e0c695ea84e3ab9915b79b90175fe&ip=${ipInput.value}`
     }
 
     fetch(apiUrl).then(response => response.json()).then(data => renderData(data)).catch(error => {
-        errorMessage()
+        console.log(error)
+        serverError()
         return
     })
 }
 
 const renderData = (data) => {
+    console.log(data)
 
     if (data.latitude === undefined && datalongitude === undefined) {
         return
     }
 
-    const prop = [data.ip, [`${data.city}, ${data.region}, ${data.country_name}`], `UTC ${data.utc_offset}`, data.org]
+    const prop = [data.ip, [`${data.city},${data.state_prov}, ${data.country_name}`], `UTC ${data.time_zone.current_time.slice(23,28)}`, data.organization]
     textDisplay.forEach((text, index) => {
         text.textContent = `${prop[index]}`
     })

@@ -18,6 +18,7 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 
 ### The challenge
 - Setting up the responsiveness of elements based on the screen size.
+- Only 1000 API requests can be used per month, please contact the developer if server fails.
 
 ### Screenshot
 ![FHD view](https://github.com/KevinChristopherMorco/ip-address-tracker/blob/main/assets/screenshot/FHD.png?raw=true)
@@ -44,7 +45,7 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 - [MDN Web Docs](https://developer.mozilla.org/) - This site has helped me to familiriaze in the documentation of certain properties needed especially in JavaScript, CSS & HTML 
 - [w3schools](https://www.w3schools.com/) - Same as MDN Web Docs, the only difference is that sometimes I find w3schools to be more visualizing in CSS and HTML.
 - [Leaflet API](https://leafletjs.com/) - A free API for interactive maps.
-- [ipapi API](https://leafletjs.com/) - A free API for finding specific details regarding IP addresses.
+- [ipgeolocation API](https://ipgeolocation.io/) - A free API for finding specific details regarding IP addresses.
 
 
 ## About the Author
