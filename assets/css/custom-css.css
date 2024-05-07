@@ -21,6 +21,14 @@
 
 }
 
+::-webkit-scrollbar{
+    width: 5px;
+    background-color: var(--White);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--primary);
+}
+
 body,
 html {
     min-height: 100%;
